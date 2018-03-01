@@ -27,21 +27,228 @@ public class Tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        Casilla1 = new javax.swing.JButton();
+        Casilla22 = new javax.swing.JButton();
+        Casilla29 = new javax.swing.JButton();
+        Casilla36 = new javax.swing.JButton();
+        Casilla8 = new javax.swing.JButton();
+        Casilla15 = new javax.swing.JButton();
+        Casilla2 = new javax.swing.JButton();
+        Casilla3 = new javax.swing.JButton();
+        Casilla4 = new javax.swing.JButton();
+        Casilla5 = new javax.swing.JButton();
+        Casilla6 = new javax.swing.JButton();
+        Casilla7 = new javax.swing.JButton();
+        Casilla9 = new javax.swing.JButton();
+        Casilla10 = new javax.swing.JButton();
+        Casilla11 = new javax.swing.JButton();
+        Casilla12 = new javax.swing.JButton();
+        Casilla13 = new javax.swing.JButton();
+        Casilla14 = new javax.swing.JButton();
+        Casilla21 = new javax.swing.JButton();
+        Casilla20 = new javax.swing.JButton();
+        Casilla19 = new javax.swing.JButton();
+        Casilla18 = new javax.swing.JButton();
+        Casilla17 = new javax.swing.JButton();
+        Casilla16 = new javax.swing.JButton();
+        Casilla23 = new javax.swing.JButton();
+        Casilla24 = new javax.swing.JButton();
+        Casilla25 = new javax.swing.JButton();
+        Casilla26 = new javax.swing.JButton();
+        Casilla27 = new javax.swing.JButton();
+        Casilla28 = new javax.swing.JButton();
+        Casilla42 = new javax.swing.JButton();
+        Casilla41 = new javax.swing.JButton();
+        Casilla40 = new javax.swing.JButton();
+        Casilla39 = new javax.swing.JButton();
+        Casilla38 = new javax.swing.JButton();
+        Casilla37 = new javax.swing.JButton();
+        Casilla35 = new javax.swing.JButton();
+        Casilla34 = new javax.swing.JButton();
+        Casilla33 = new javax.swing.JButton();
+        Casilla30 = new javax.swing.JButton();
+        Casilla31 = new javax.swing.JButton();
+        Casilla32 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Casilla1.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla1.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla1.setText("CQMa1");
+        Casilla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Casilla1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Casilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 193, -1, -1));
+
+        Casilla22.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla22.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla22.setText("CQAm22");
+        Casilla22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Casilla22ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Casilla22, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 193, -1, -1));
+
+        Casilla29.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla29.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla29.setText("CQRo29");
+        getContentPane().add(Casilla29, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 331, -1, -1));
+
+        Casilla36.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla36.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla36.setText("CQVe36");
+        getContentPane().add(Casilla36, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 331, -1, -1));
+
+        Casilla8.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla8.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla8.setText("CQAz8");
+        getContentPane().add(Casilla8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 55, -1, -1));
+
+        Casilla15.setBackground(new java.awt.Color(255, 255, 255));
+        Casilla15.setForeground(new java.awt.Color(0, 0, 0));
+        Casilla15.setText("CQNa15");
+        getContentPane().add(Casilla15, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 55, -1, -1));
+
+        Casilla2.setText("jButton8");
+        getContentPane().add(Casilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 175, 44, 13));
+
+        Casilla3.setText("jButton9");
+        Casilla3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Casilla3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Casilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 157, 44, 13));
+
+        Casilla4.setText("jButton10");
+        getContentPane().add(Casilla4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 139, 44, 13));
+
+        Casilla5.setText("jButton11");
+        getContentPane().add(Casilla5, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 121, 44, 13));
+
+        Casilla6.setText("jButton12");
+        getContentPane().add(Casilla6, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 103, 44, 13));
+
+        Casilla7.setText("jButton13");
+        getContentPane().add(Casilla7, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 85, 44, 13));
+
+        Casilla9.setText("jButton14");
+        Casilla9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Casilla9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Casilla9, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 37, 42, 13));
+
+        Casilla10.setText("jButton15");
+        getContentPane().add(Casilla10, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 19, 42, 13));
+
+        Casilla11.setText("jButton16");
+        getContentPane().add(Casilla11, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 1, 42, 13));
+
+        Casilla12.setText("jButton17");
+        getContentPane().add(Casilla12, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 1, 42, 13));
+
+        Casilla13.setText("jButton18");
+        getContentPane().add(Casilla13, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 19, 42, 13));
+
+        Casilla14.setText("jButton19");
+        getContentPane().add(Casilla14, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 37, 42, 13));
+
+        Casilla21.setText("jButton20");
+        getContentPane().add(Casilla21, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 175, 42, 13));
+
+        Casilla20.setText("jButton21");
+        getContentPane().add(Casilla20, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 157, 42, 13));
+
+        Casilla19.setText("jButton22");
+        getContentPane().add(Casilla19, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 139, 42, 13));
+
+        Casilla18.setText("jButton23");
+        getContentPane().add(Casilla18, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 121, 42, 13));
+
+        Casilla17.setText("jButton24");
+        getContentPane().add(Casilla17, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 103, 42, 13));
+
+        Casilla16.setText("jButton25");
+        getContentPane().add(Casilla16, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 85, 42, 13));
+
+        Casilla23.setText("jButton1");
+        getContentPane().add(Casilla23, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 223, 42, 13));
+
+        Casilla24.setText("jButton2");
+        getContentPane().add(Casilla24, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 241, 42, 13));
+
+        Casilla25.setText("jButton3");
+        getContentPane().add(Casilla25, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 259, 42, 13));
+
+        Casilla26.setText("jButton4");
+        getContentPane().add(Casilla26, new org.netbeans.lib.awtextra.AbsoluteConstraints(395, 277, 42, 13));
+
+        Casilla27.setText("jButton5");
+        getContentPane().add(Casilla27, new org.netbeans.lib.awtextra.AbsoluteConstraints(381, 295, 42, 13));
+
+        Casilla28.setText("jButton6");
+        getContentPane().add(Casilla28, new org.netbeans.lib.awtextra.AbsoluteConstraints(364, 313, 42, 13));
+
+        Casilla42.setText("jButton7");
+        getContentPane().add(Casilla42, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 223, 42, 13));
+
+        Casilla41.setText("jButton26");
+        getContentPane().add(Casilla41, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 241, 42, 13));
+
+        Casilla40.setText("jButton27");
+        getContentPane().add(Casilla40, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 259, 42, 13));
+
+        Casilla39.setText("jButton28");
+        getContentPane().add(Casilla39, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 277, 42, 13));
+
+        Casilla38.setText("jButton29");
+        getContentPane().add(Casilla38, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 295, 42, 13));
+
+        Casilla37.setText("jButton30");
+        getContentPane().add(Casilla37, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 313, 42, 13));
+
+        Casilla35.setText("jButton31");
+        getContentPane().add(Casilla35, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 361, 42, 13));
+
+        Casilla34.setText("jButton32");
+        getContentPane().add(Casilla34, new org.netbeans.lib.awtextra.AbsoluteConstraints(156, 379, 42, 13));
+
+        Casilla33.setText("jButton33");
+        getContentPane().add(Casilla33, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 397, 42, 13));
+
+        Casilla30.setText("jButton34");
+        getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 361, 42, 13));
+
+        Casilla31.setText("jButton35");
+        getContentPane().add(Casilla31, new org.netbeans.lib.awtextra.AbsoluteConstraints(294, 379, 42, 13));
+
+        Casilla32.setText("jButton36");
+        getContentPane().add(Casilla32, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 397, 42, 13));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Casilla22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Casilla22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Casilla22ActionPerformed
+
+    private void Casilla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Casilla1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Casilla1ActionPerformed
+
+    private void Casilla9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Casilla9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Casilla9ActionPerformed
+
+    private void Casilla3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Casilla3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Casilla3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +286,47 @@ public class Tablero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Casilla1;
+    private javax.swing.JButton Casilla10;
+    private javax.swing.JButton Casilla11;
+    private javax.swing.JButton Casilla12;
+    private javax.swing.JButton Casilla13;
+    private javax.swing.JButton Casilla14;
+    private javax.swing.JButton Casilla15;
+    private javax.swing.JButton Casilla16;
+    private javax.swing.JButton Casilla17;
+    private javax.swing.JButton Casilla18;
+    private javax.swing.JButton Casilla19;
+    private javax.swing.JButton Casilla2;
+    private javax.swing.JButton Casilla20;
+    private javax.swing.JButton Casilla21;
+    private javax.swing.JButton Casilla22;
+    private javax.swing.JButton Casilla23;
+    private javax.swing.JButton Casilla24;
+    private javax.swing.JButton Casilla25;
+    private javax.swing.JButton Casilla26;
+    private javax.swing.JButton Casilla27;
+    private javax.swing.JButton Casilla28;
+    private javax.swing.JButton Casilla29;
+    private javax.swing.JButton Casilla3;
+    private javax.swing.JButton Casilla30;
+    private javax.swing.JButton Casilla31;
+    private javax.swing.JButton Casilla32;
+    private javax.swing.JButton Casilla33;
+    private javax.swing.JButton Casilla34;
+    private javax.swing.JButton Casilla35;
+    private javax.swing.JButton Casilla36;
+    private javax.swing.JButton Casilla37;
+    private javax.swing.JButton Casilla38;
+    private javax.swing.JButton Casilla39;
+    private javax.swing.JButton Casilla4;
+    private javax.swing.JButton Casilla40;
+    private javax.swing.JButton Casilla41;
+    private javax.swing.JButton Casilla42;
+    private javax.swing.JButton Casilla5;
+    private javax.swing.JButton Casilla6;
+    private javax.swing.JButton Casilla7;
+    private javax.swing.JButton Casilla8;
+    private javax.swing.JButton Casilla9;
     // End of variables declaration//GEN-END:variables
 }
