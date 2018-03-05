@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -60,9 +61,9 @@ public class MetodosPregunta {
 //        }
 //    }
     /**
-     * Método "añadirPregunta" en el cual a través de un bucle do while en el que
-     * se pide el tipo de pregunta, la pregunta y cuatro respuestas; Tras ésto
-     * se crea un nuevo objeto de tipo pregunta conformado por estos nuevos
+     * Método "añadirPregunta" en el cual a través de un bucle do while en el
+     * que se pide el tipo de pregunta, la pregunta y cuatro respuestas; Tras
+     * ésto se crea un nuevo objeto de tipo pregunta conformado por estos nuevos
      * parámetros y se escribe en el fichero.
      */
     public void añadirPreguntaPro() {
@@ -89,7 +90,7 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void añadirPreguntaSis() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaSis), true));
@@ -114,7 +115,7 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void añadirPreguntaBds() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaBds), true));
@@ -139,7 +140,7 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void añadirPreguntaLmsxi() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaBds), true));
@@ -164,7 +165,7 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void añadirPreguntaFol() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaFol), true));
@@ -189,7 +190,7 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void añadirPreguntaCod() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaCod), true));
@@ -214,29 +215,69 @@ public class MetodosPregunta {
             sc.close();
         }
     }
-    
+
     public void leerPreguntaPro() {
-        
+        try {
+            sc = new Scanner(new File(listaPro));
+            pregunta = new ArrayList();
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            int numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+         * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+         * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - principioRes + 1) + principioRes;
+            System.out.println(pregunta.get(numPregunta));
+            System.out.println("\t1) " + pregunta.get(numRespuesta1));
+            /*
+             * Bucle do while para comprobar que el numero aleatorio generado 
+             * no coincide con los anteriores.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            System.out.println("\t2) " + pregunta.get(numRespuesta2));
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            System.out.println("\t3) " + pregunta.get(numRespuesta3));
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            System.out.println("\t4) " + pregunta.get(numRespuesta4));
+            System.out.println("Introduzca la respuesta(1,2,3,4)");
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
     }
-    
+
     public void leerPreguntaSis() {
-        
+
     }
-    
+
     public void leerPreguntaBds() {
-        
+
     }
-    
+
     public void leerPreguntaLmsxi() {
-        
+
     }
-    
+
     public void leerPreguntaFol() {
-        
+
     }
-    
+
     public void leerPreguntaCod() {
-        
+
     }
 
     public void visualizar() {
