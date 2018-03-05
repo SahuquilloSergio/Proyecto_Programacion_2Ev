@@ -6,22 +6,17 @@ package com.sergioadrian.juego;
  */
 public class Pregunta {
     
-    private String tipoPregunta, pregunta, res1, res2, res3, res4;
+    private String pregunta, res1, res2, res3, res4;
 
     public Pregunta() {
     }
 
-    public Pregunta(String tipoPregunta, String pregunta, String res1, String res2, String res3, String res4) {
-        this.tipoPregunta = tipoPregunta;
+    public Pregunta(String pregunta, String res1, String res2, String res3, String res4) {
         this.pregunta = pregunta;
         this.res1 = res1;
         this.res2 = res2;
         this.res3 = res3;
         this.res4 = res4;
-    }
-
-    public void setTipoPregunta(String tipoPregunta) {
-        this.tipoPregunta = tipoPregunta;
     }
 
     public void setPregunta(String pregunta) {
@@ -42,10 +37,6 @@ public class Pregunta {
 
     public void setRes4(String res4) {
         this.res4 = res4;
-    }
-
-    public String getTipoPregunta() {
-        return tipoPregunta;
     }
 
     public String getPregunta() {
@@ -70,7 +61,7 @@ public class Pregunta {
 
     @Override
     public String toString() {
-        return tipoPregunta + "," + pregunta + "," + res1 + "," + res2 + "," 
+        return pregunta + "," + res1 + "," + res2 + "," 
                 + res3 + "," + res4;
     }
     
