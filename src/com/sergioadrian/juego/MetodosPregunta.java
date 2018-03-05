@@ -60,7 +60,7 @@ public class MetodosPregunta {
      * se crea un nuevo objeto de tipo pregunta conformado por estos nuevos
      * parámetros y se escribe en el fichero.
      */
-    public void añadirPregunta() {
+    public void añadirPreguntaPro() {
         try {
             pw = new PrintWriter(new FileWriter(new File(listaPro), true));
             sc = new Scanner(new File(listaPro));
@@ -86,7 +86,47 @@ public class MetodosPregunta {
         }
     }
     
-    public void leerPregunta() {
+    public void añadirPreguntaSis() {
+        
+    }
+    
+    public void añadirPreguntaBds() {
+        
+    }
+    
+    public void añadirPreguntaLmsxi() {
+        
+    }
+    
+    public void añadirPreguntaFol() {
+        
+    }
+    
+    public void añadirPreguntaCod() {
+        
+    }
+    
+    public void leerPreguntaPro() {
+        
+    }
+    
+    public void leerPreguntaSis() {
+        
+    }
+    
+    public void leerPreguntaBds() {
+        
+    }
+    
+    public void leerPreguntaLmsxi() {
+        
+    }
+    
+    public void leerPreguntaFol() {
+        
+    }
+    
+    public void leerPreguntaCod() {
         
     }
 

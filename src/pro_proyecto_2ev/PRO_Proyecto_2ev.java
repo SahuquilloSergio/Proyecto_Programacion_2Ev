@@ -9,7 +9,7 @@ public class PRO_Proyecto_2ev {
 
     public static void main(String[] args) {
         MetodosPregunta obj1 = new MetodosPregunta();
-        obj1.añadirPregunta();
+        obj1.añadirPreguntaPro();
         obj1.visualizar();
     }
     
