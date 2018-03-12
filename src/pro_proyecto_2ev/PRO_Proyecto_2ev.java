@@ -12,6 +12,10 @@ public class PRO_Proyecto_2ev {
         //obj1.añadirPreguntaPro();
         obj1.visualizar();
         obj1.leerPreguntaPro();
+        MTablero T1 = new MTablero();
+//        obj1.añadirPreguntaPro();
+//        obj1.visualizar();
+        T1.tirarDado();
     }
     
 }
