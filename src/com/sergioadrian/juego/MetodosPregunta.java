@@ -220,13 +220,19 @@ public class MetodosPregunta {
     public void leerPreguntaPro() {
         try {
             sc = new Scanner(new File(listaPro));
-            //pregunta = new ArrayList();
-            Pregunta p1;
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
             while (sc.hasNextLine()) {
                 linea = sc.nextLine();
                 lista = new String[5];
                 lista = linea.split(delim);
-                p1 = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
             }
             int finalRes = 4;
             int principioRes = 1;
@@ -242,8 +248,6 @@ public class MetodosPregunta {
              * una pregunta de las almacenadas en el fichero.
              */
             int numPregunta = num.nextInt((pregunta.size() - 1) - principioRes + 1) + principioRes;
-            System.out.println(pregunta.get(numPregunta));
-            System.out.println("\t1) " + pregunta.get(numRespuesta1));
             /*
              * Bucle do while que se emplea en cada una de las respuestas
              * siguientes que generará otro número aleatorio para esa respuesta
@@ -252,16 +256,18 @@ public class MetodosPregunta {
             do {
                 numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta2);
-            System.out.println("\t2) " + pregunta.get(numRespuesta2));
             do {
                 numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
-            System.out.println("\t3) " + pregunta.get(numRespuesta3));
             do {
                 numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
-            System.out.println("\t4) " + pregunta.get(numRespuesta4));
-            System.out.println("Introduzca la respuesta(1,2,3,4)");
+            JOptionPane.showInputDialog(
+                    "Pregunta Programación:\n" + pregunta.get(numPregunta)
+                    + "\n1) " + pregunta.get(numPregunta).getRes1()
+                    + "\n2) " + pregunta.get(numPregunta).getRes2()
+                    + "\n3) " + pregunta.get(numPregunta).getRes3()
+                    + "\n4) " + pregunta.get(numPregunta).getRes4());
         } catch (IOException ex) {
             Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
