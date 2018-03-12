@@ -1,0 +1,2 @@
+﻿¿Cómo se escribe unha sentenza selectiva ou condicional en Java?,if (...) {};,for (...) {};,try {} catch (...) {};,do {} while (...);
+¿Cál non é unha linguaxe de programación?,Visual Basic.net,Kotlin,Python,HTML (HTML é unha linguaxe de etiquetas)
