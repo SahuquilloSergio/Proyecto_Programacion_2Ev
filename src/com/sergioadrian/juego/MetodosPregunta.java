@@ -30,6 +30,7 @@ public class MetodosPregunta {
     String delim = ",";
     String linea;
     int bucle;
+    String[] lista;
 
     /*
        * Si op=0 añade "pro" en tipoPregunta de Pregunta, etc etc
@@ -219,7 +220,14 @@ public class MetodosPregunta {
     public void leerPreguntaPro() {
         try {
             sc = new Scanner(new File(listaPro));
-            pregunta = new ArrayList();
+            //pregunta = new ArrayList();
+            Pregunta p1;
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                p1 = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+            }
             int finalRes = 4;
             int principioRes = 1;
             int pre = 0;
@@ -230,15 +238,16 @@ public class MetodosPregunta {
             int numRespuesta3;
             int numRespuesta4;
             /*
-         * Se crea otro número aleatorio que seleccionará de forma aleatoria 
-         * una pregunta de las almacenadas en el fichero.
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
              */
             int numPregunta = num.nextInt((pregunta.size() - 1) - principioRes + 1) + principioRes;
             System.out.println(pregunta.get(numPregunta));
             System.out.println("\t1) " + pregunta.get(numRespuesta1));
             /*
-             * Bucle do while para comprobar que el numero aleatorio generado 
-             * no coincide con los anteriores.
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida..
              */
             do {
                 numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
