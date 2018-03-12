@@ -107,7 +107,7 @@ public class Tablero extends javax.swing.JFrame {
                 Casilla29MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla29, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 80, 30));
+        getContentPane().add(Casilla29, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 80, 30));
 
         Casilla36.setBackground(new java.awt.Color(51, 204, 0));
         Casilla36.setForeground(new java.awt.Color(0, 0, 0));
@@ -412,7 +412,7 @@ public class Tablero extends javax.swing.JFrame {
                 Casilla35MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla35, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 354, 50, 20));
+        getContentPane().add(Casilla35, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 354, 50, 20));
 
         Casilla34.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla34.setText("jButton32");
@@ -439,7 +439,7 @@ public class Tablero extends javax.swing.JFrame {
                 Casilla30MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 50, 20));
+        getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 60, 20));
 
         Casilla31.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla31.setText("jButton35");
@@ -459,7 +459,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla32, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 50, 20));
 
-        dado.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\dado2.png")); // NOI18N
         dado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dadoMouseClicked(evt);
