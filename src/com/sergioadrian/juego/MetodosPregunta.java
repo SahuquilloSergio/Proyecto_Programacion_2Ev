@@ -264,10 +264,10 @@ public class MetodosPregunta {
             } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
             JOptionPane.showInputDialog(
                     "Pregunta Programación:\n" + pregunta.get(numPregunta)
-                    + "\n1) " + pregunta.get(numPregunta).getRes1()
-                    + "\n2) " + pregunta.get(numPregunta).getRes2()
-                    + "\n3) " + pregunta.get(numPregunta).getRes3()
-                    + "\n4) " + pregunta.get(numPregunta).getRes4());
+                    + "\n" + numRespuesta1 + ") " + pregunta.get(numPregunta).getRes1()
+                    + "\n" + numRespuesta2 + ") " + pregunta.get(numPregunta).getRes2()
+                    + "\n" + numRespuesta3 + ") " + pregunta.get(numPregunta).getRes3()
+                    + "\n" + numRespuesta4 + ") " + pregunta.get(numPregunta).getRes4());
         } catch (IOException ex) {
             Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
