@@ -234,12 +234,12 @@ public class MetodosPregunta {
                 Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
                 pregunta.add(p);
             }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
             int finalRes = 4;
             int principioRes = 1;
             int pre = 0;
             Random num = new Random(System.nanoTime());
-            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
-            int numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            int numRespuesta1;
             int numRespuesta2;
             int numRespuesta3;
             int numRespuesta4;
@@ -247,11 +247,13 @@ public class MetodosPregunta {
              * Se crea otro número aleatorio que seleccionará de forma aleatoria 
              * una pregunta de las almacenadas en el fichero.
              */
-            int numPregunta = num.nextInt((pregunta.size() - 1) - principioRes + 1) + principioRes;
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             /*
              * Bucle do while que se emplea en cada una de las respuestas
              * siguientes que generará otro número aleatorio para esa respuesta
-             * y seguirá generándolo hasta que no coincida..
+             * y seguirá generándolo hasta que no coincida.
              */
             do {
                 numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
@@ -262,12 +264,18 @@ public class MetodosPregunta {
             do {
                 numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
-            JOptionPane.showInputDialog(
-                    "Pregunta Programación:\n" + pregunta.get(numPregunta)
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Programación:\n" + pregunta.get(numPregunta).getPregunta()
                     + "\n" + numRespuesta1 + ") " + pregunta.get(numPregunta).getRes1()
                     + "\n" + numRespuesta2 + ") " + pregunta.get(numPregunta).getRes2()
                     + "\n" + numRespuesta3 + ") " + pregunta.get(numPregunta).getRes3()
-                    + "\n" + numRespuesta4 + ") " + pregunta.get(numPregunta).getRes4());
+                    + "\n" + numRespuesta4 + ") " + pregunta.get(numPregunta).getRes4()));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+               JOptionPane.showMessageDialog(null, "Has acertado, vuelves a tirar!");
+            } else {
+               JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
         } catch (IOException ex) {
             Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
