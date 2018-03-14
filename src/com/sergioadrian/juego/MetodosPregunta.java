@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -264,17 +265,44 @@ public class MetodosPregunta {
             do {
                 numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        //Intercambiamos valores
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+
+                    }
+                }
+            }
+
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(
                     "Pregunta Programación:\n" + pregunta.get(numPregunta).getPregunta()
-                    + "\n" + numRespuesta1 + ") " + pregunta.get(numPregunta).getRes1()
-                    + "\n" + numRespuesta2 + ") " + pregunta.get(numPregunta).getRes2()
-                    + "\n" + numRespuesta3 + ") " + pregunta.get(numPregunta).getRes3()
-                    + "\n" + numRespuesta4 + ") " + pregunta.get(numPregunta).getRes4()));
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
             // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
             if (opcion == numRespuesta1) {
-               JOptionPane.showMessageDialog(null, "Has acertado, vuelves a tirar!");
+                JOptionPane.showMessageDialog(null, "Has acertado, vuelves a tirar!");
             } else {
-               JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
             }
         } catch (IOException ex) {
             Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
