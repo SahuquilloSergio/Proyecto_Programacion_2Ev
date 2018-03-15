@@ -32,36 +32,35 @@ public class MetodosPregunta {
     String linea;
     int bucle;
     String[] lista;
-
-    /*
-       * Si op=0 añade "pro" en tipoPregunta de Pregunta, etc etc
-       * Pendiente para DLC.
+    /**
+     * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a gestionar
+     * con un switch case la inserción de preguntas a ficheros.
      */
-//    String[] opciones = {"PRO", "SI", "BD", "COD", "FOL", "LMSXI"};
-//    public void añadir() {
-//        try {
-//            f = new PrintWriter(new FileWriter(new File(rutaFicheroPreguntas), true));
-//            sc = new Scanner(new File(rutaFicheroPreguntas));
-//            do {
-//                pregunta = new ArrayList();
-//                String tipoPregunta;
-//                int op = JOptionPane.showOptionDialog(null, "¿Tipo de pregunta?", "Selecciona un boton", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones[0]);
-//                switch (op) {
-//                    case 1: ;
-//                }
-//                Pregunta p = new Pregunta();
-//                pregunta.add(p);
-//                f.println(p);
-//                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-//            } while (bucle == 0);
-//
-//        } catch (IOException ex) {
-//            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-//        } finally {
-//            f.close();
-//            sc.close();
-//        }
-//    }
+    public void menuAñadir() {
+        int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                "**** MENU ****\n"
+                + "1) Añadir pregunta Programación\n"
+                + "2) Añadir pregunta Bases de Datos\n"
+                + "3) Añadir pregunta Sistemas Informáticos\n"
+                + "4) Añadir pregunta FOL\n"
+                + "5) Añadir pregunta LMSXI\n"
+                + "6) Añadir pregunta COD\n"
+                + "7) Exit"));
+            switch(opcion){
+                case 1: this.añadirPreguntaPro();
+                    break;
+                case 2: this.añadirPreguntaBds();
+                    break;
+                case 3: this.añadirPreguntaSis();
+                    break;
+                case 4: this.añadirPreguntaFol();
+                    break;
+                case 5: this.añadirPreguntaLmsxi();
+                    break;
+                case 6: this.añadirPreguntaCod();
+                    break;
+            }
+    }
     /**
      * Método "añadirPregunta" en el cual a través de un bucle do while en el
      * que se pide el tipo de pregunta, la pregunta y cuatro respuestas; Tras
@@ -218,9 +217,9 @@ public class MetodosPregunta {
         }
     }
 
-    public void leerPregunta(File fichero) {
+    public void leerPreguntaPro() {
         try {
-            sc = new Scanner(fichero);
+            sc = new Scanner(new File(listaPro));
             pregunta = new ArrayList();
             /*
              * Bucle while que mientras, en el fichero, haya más líneas que leer
@@ -290,9 +289,8 @@ public class MetodosPregunta {
                     }
                 }
             }
-            // Se imprime la pregunta:
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(
-                    "Pregunta:\n" + pregunta.get(numPregunta).getPregunta()
+                    "Pregunta Programación:\n" + pregunta.get(numPregunta).getPregunta()
                     + "\n" + auxiliar[0]
                     + "\n" + auxiliar[1]
                     + "\n" + auxiliar[2]
