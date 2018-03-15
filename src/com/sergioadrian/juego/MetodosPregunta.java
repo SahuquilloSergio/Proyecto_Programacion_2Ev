@@ -35,6 +35,7 @@ public class MetodosPregunta {
     String linea;
     int bucle;
     String[] lista;
+    File fichero;
 
     /**
      * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a
@@ -78,27 +79,33 @@ public class MetodosPregunta {
         do {
             switch (opcion) {
                 case 1:
-                    this.añadirPreguntaPro();
+                    fichero = new File(listaPro);
+                    this.añadirPregunta(fichero);
                     break;
                 case 2:
-                    this.añadirPreguntaBds();
+                    fichero = new File(listaBds);
+                    this.añadirPregunta(fichero);
                     break;
                 case 3:
-                    this.añadirPreguntaSis();
+                    fichero = new File(listaSis);
+                    this.añadirPregunta(fichero);
                     break;
                 case 4:
-                    this.añadirPreguntaFol();
+                    fichero = new File(listaFol);
+                    this.añadirPregunta(fichero);
                     break;
                 case 5:
-                    this.añadirPreguntaLmsxi();
+                    fichero = new File(listaLmsxi);
+                    this.añadirPregunta(fichero);
                     break;
                 case 6:
-                    this.añadirPreguntaCod();
+                    fichero = new File(listaCod);
+                    this.añadirPregunta(fichero);
                     break;
                 case 7:
                     this.menuPrincipal();
             }
-        } while (opcion < 7);
+        } while (opcion > 7);
     }
 
     /**
@@ -106,136 +113,12 @@ public class MetodosPregunta {
      * que se pide el tipo de pregunta, la pregunta y cuatro respuestas; Tras
      * ésto se crea un nuevo objeto de tipo pregunta conformado por estos nuevos
      * parámetros y se escribe en el fichero.
+     * @param fichero que pide el método para introducir en el la nueva pregunta.
      */
-    public void añadirPreguntaPro() {
+    public void añadirPregunta(File fichero) {
         try {
-            pw = new PrintWriter(new FileWriter(new File(listaPro), true));
-            sc = new Scanner(new File(listaPro));
-            // Bucle do while en el que se piden los valores de las variables.
-            do {
-                pregunta = new ArrayList();
-                String preg = JOptionPane.showInputDialog("Pregunta: ");
-                String res1 = JOptionPane.showInputDialog("Respuesta 1: ");
-                String res2 = JOptionPane.showInputDialog("Respuesta 2: ");
-                String res3 = JOptionPane.showInputDialog("Respuesta 3: ");
-                String res4 = JOptionPane.showInputDialog("Respuesta 4: ");
-                Pregunta p = new Pregunta(preg, res1, res2, res3, res4);
-                pregunta.add(p);
-                pw.println(p);
-                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-            } while (bucle == 0);
-        } catch (IOException ex) {
-            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            pw.close();
-            sc.close();
-        }
-    }
-
-    public void añadirPreguntaSis() {
-        try {
-            pw = new PrintWriter(new FileWriter(new File(listaSis), true));
-            sc = new Scanner(new File(listaSis));
-            // Bucle do while en el que se piden los valores de las variables.
-            do {
-                pregunta = new ArrayList();
-                String preg = JOptionPane.showInputDialog("Pregunta: ");
-                String res1 = JOptionPane.showInputDialog("Respuesta 1: ");
-                String res2 = JOptionPane.showInputDialog("Respuesta 2: ");
-                String res3 = JOptionPane.showInputDialog("Respuesta 3: ");
-                String res4 = JOptionPane.showInputDialog("Respuesta 4: ");
-                Pregunta p = new Pregunta(preg, res1, res2, res3, res4);
-                pregunta.add(p);
-                pw.println(p);
-                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-            } while (bucle == 0);
-        } catch (IOException ex) {
-            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            pw.close();
-            sc.close();
-        }
-    }
-
-    public void añadirPreguntaBds() {
-        try {
-            pw = new PrintWriter(new FileWriter(new File(listaBds), true));
-            sc = new Scanner(new File(listaBds));
-            // Bucle do while en el que se piden los valores de las variables.
-            do {
-                pregunta = new ArrayList();
-                String preg = JOptionPane.showInputDialog("Pregunta: ");
-                String res1 = JOptionPane.showInputDialog("Respuesta 1: ");
-                String res2 = JOptionPane.showInputDialog("Respuesta 2: ");
-                String res3 = JOptionPane.showInputDialog("Respuesta 3: ");
-                String res4 = JOptionPane.showInputDialog("Respuesta 4: ");
-                Pregunta p = new Pregunta(preg, res1, res2, res3, res4);
-                pregunta.add(p);
-                pw.println(p);
-                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-            } while (bucle == 0);
-        } catch (IOException ex) {
-            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            pw.close();
-            sc.close();
-        }
-    }
-
-    public void añadirPreguntaLmsxi() {
-        try {
-            pw = new PrintWriter(new FileWriter(new File(listaBds), true));
-            sc = new Scanner(new File(listaBds));
-            // Bucle do while en el que se piden los valores de las variables.
-            do {
-                pregunta = new ArrayList();
-                String preg = JOptionPane.showInputDialog("Pregunta: ");
-                String res1 = JOptionPane.showInputDialog("Respuesta 1: ");
-                String res2 = JOptionPane.showInputDialog("Respuesta 2: ");
-                String res3 = JOptionPane.showInputDialog("Respuesta 3: ");
-                String res4 = JOptionPane.showInputDialog("Respuesta 4: ");
-                Pregunta p = new Pregunta(preg, res1, res2, res3, res4);
-                pregunta.add(p);
-                pw.println(p);
-                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-            } while (bucle == 0);
-        } catch (IOException ex) {
-            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            pw.close();
-            sc.close();
-        }
-    }
-
-    public void añadirPreguntaFol() {
-        try {
-            pw = new PrintWriter(new FileWriter(new File(listaFol), true));
-            sc = new Scanner(new File(listaFol));
-            // Bucle do while en el que se piden los valores de las variables.
-            do {
-                pregunta = new ArrayList();
-                String preg = JOptionPane.showInputDialog("Pregunta: ");
-                String res1 = JOptionPane.showInputDialog("Respuesta 1: ");
-                String res2 = JOptionPane.showInputDialog("Respuesta 2: ");
-                String res3 = JOptionPane.showInputDialog("Respuesta 3: ");
-                String res4 = JOptionPane.showInputDialog("Respuesta 4: ");
-                Pregunta p = new Pregunta(preg, res1, res2, res3, res4);
-                pregunta.add(p);
-                pw.println(p);
-                bucle = JOptionPane.showConfirmDialog(null, "¿Añadir mas?");
-            } while (bucle == 0);
-        } catch (IOException ex) {
-            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            pw.close();
-            sc.close();
-        }
-    }
-
-    public void añadirPreguntaCod() {
-        try {
-            pw = new PrintWriter(new FileWriter(new File(listaCod), true));
-            sc = new Scanner(new File(listaCod));
+            pw = new PrintWriter(new FileWriter(fichero, true));
+            sc = new Scanner(fichero);
             // Bucle do while en el que se piden los valores de las variables.
             do {
                 pregunta = new ArrayList();
