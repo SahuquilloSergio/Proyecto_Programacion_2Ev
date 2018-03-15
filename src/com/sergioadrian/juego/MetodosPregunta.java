@@ -35,9 +35,35 @@ public class MetodosPregunta {
     String linea;
     int bucle;
     String[] lista;
+
     /**
-     * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a gestionar
-     * con un switch case la inserción de preguntas a ficheros.
+     * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a
+     * gestionar con un switch case la inserción de preguntas a ficheros.
+     */
+    public void menuPrincipal() {
+        int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                "**** MENU ****\n"
+                + "1) Añadir pregunta\n"
+                + "2) Leer pregunta\n"
+                + "3) Exit"));
+        do {
+            switch (opcion) {
+                case 1:
+                    this.menuAñadir();
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+            }
+        } while (opcion < 3);
+    }
+
+    /**
+     * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a
+     * gestionar con un switch case la inserción de preguntas a ficheros.
      */
     public void menuAñadir() {
         int opcion = Integer.parseInt(JOptionPane.showInputDialog(
@@ -48,22 +74,33 @@ public class MetodosPregunta {
                 + "4) Añadir pregunta FOL\n"
                 + "5) Añadir pregunta LMSXI\n"
                 + "6) Añadir pregunta COD\n"
-                + "7) Exit"));
-            switch(opcion){
-                case 1: this.añadirPreguntaPro();
+                + "7) Menu principal"));
+        do {
+            switch (opcion) {
+                case 1:
+                    this.añadirPreguntaPro();
                     break;
-                case 2: this.añadirPreguntaBds();
+                case 2:
+                    this.añadirPreguntaBds();
                     break;
-                case 3: this.añadirPreguntaSis();
+                case 3:
+                    this.añadirPreguntaSis();
                     break;
-                case 4: this.añadirPreguntaFol();
+                case 4:
+                    this.añadirPreguntaFol();
                     break;
-                case 5: this.añadirPreguntaLmsxi();
+                case 5:
+                    this.añadirPreguntaLmsxi();
                     break;
-                case 6: this.añadirPreguntaCod();
+                case 6:
+                    this.añadirPreguntaCod();
                     break;
+                case 7:
+                    this.menuPrincipal();
             }
+        } while (opcion < 7);
     }
+
     /**
      * Método "añadirPregunta" en el cual a través de un bucle do while en el
      * que se pide el tipo de pregunta, la pregunta y cuatro respuestas; Tras
