@@ -6,6 +6,7 @@
 package com.interfaz;
 import com.sergioadrian.juego.MetodosPregunta;
 import com.sergioadrian.juego.MTablero;
+import java.io.File;
 
 /**
  *
@@ -21,6 +22,13 @@ public class Tablero extends javax.swing.JFrame {
     }
     MetodosPregunta M1 = new MetodosPregunta();
     MTablero T1 = new MTablero();
+    File FicheroPRO = new File("FicheroPreguntasPRO.txt");
+    File FicheroSI = new File("FicheroPreguntasSI.txt");
+    File FicheroLMSXI = new File("FicheroPreguntasLMSXI.txt");
+    File FicheroBD = new File("FicheroPreguntasBD.txt");
+    File FicheroFOL = new File("FicheroPreguntasFOL.txt");
+    File FicheroCOD = new File("FicheroPreguntasCOD.txt");
+    
     
 
     /**
@@ -470,7 +478,7 @@ public class Tablero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Casilla1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla1MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerPregunta(FicheroSI);
     }//GEN-LAST:event_Casilla1MouseClicked
 
     private void Casilla3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla3MouseClicked
@@ -478,11 +486,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla3MouseClicked
 
     private void Casilla4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla4MouseClicked
-        M1.leerPreguntaCod();
+        M1.leerPregunta(FicheroCOD);
     }//GEN-LAST:event_Casilla4MouseClicked
 
     private void Casilla5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla5MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerPregunta(FicheroLMSXI);
     }//GEN-LAST:event_Casilla5MouseClicked
 
     private void Casilla6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla6MouseClicked
@@ -490,15 +498,15 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla6MouseClicked
 
     private void Casilla7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla7MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerPregunta(FicheroFOL);
     }//GEN-LAST:event_Casilla7MouseClicked
 
     private void Casilla8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla8MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerPregunta(FicheroBD);
     }//GEN-LAST:event_Casilla8MouseClicked
 
     private void Casilla9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla9MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerPregunta(FicheroFOL);
     }//GEN-LAST:event_Casilla9MouseClicked
 
     private void Casilla10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla10MouseClicked
@@ -506,11 +514,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla10MouseClicked
 
     private void Casilla11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla11MouseClicked
-        M1.leerPreguntaPro();
+        M1.leerPregunta(FicheroPRO);
     }//GEN-LAST:event_Casilla11MouseClicked
 
     private void Casilla12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla12MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerPregunta(FicheroSI);
     }//GEN-LAST:event_Casilla12MouseClicked
 
     private void Casilla13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla13MouseClicked
@@ -518,15 +526,15 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla13MouseClicked
 
     private void Casilla14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla14MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerPregunta(FicheroLMSXI);
     }//GEN-LAST:event_Casilla14MouseClicked
 
     private void Casilla15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla15MouseClicked
-        M1.leerPreguntaCod();
+        M1.leerPregunta(FicheroCOD);
     }//GEN-LAST:event_Casilla15MouseClicked
 
     private void Casilla16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla16MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerPregunta(FicheroLMSXI);
     }//GEN-LAST:event_Casilla16MouseClicked
 
     private void Casilla17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla17MouseClicked
@@ -534,11 +542,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla17MouseClicked
 
     private void Casilla18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla18MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerPregunta(FicheroFOL);
     }//GEN-LAST:event_Casilla18MouseClicked
 
     private void Casilla19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla19MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerPregunta(FicheroBD);
     }//GEN-LAST:event_Casilla19MouseClicked
 
     private void Casilla20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla20MouseClicked
@@ -546,15 +554,15 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla20MouseClicked
 
     private void Casilla21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla21MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerPregunta(FicheroSI);
     }//GEN-LAST:event_Casilla21MouseClicked
 
     private void Casilla22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla22MouseClicked
-        M1.leerPreguntaPro();
+        M1.leerPregunta(FicheroPRO);
     }//GEN-LAST:event_Casilla22MouseClicked
 
     private void Casilla23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla23MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerPregunta(FicheroSI);
     }//GEN-LAST:event_Casilla23MouseClicked
 
     private void Casilla24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla24MouseClicked
@@ -562,11 +570,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla24MouseClicked
 
     private void Casilla25MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla25MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerPregunta(FicheroLMSXI);
     }//GEN-LAST:event_Casilla25MouseClicked
 
     private void Casilla26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla26MouseClicked
-        M1.leerPreguntaCod();
+        M1.leerPregunta(FicheroCOD);
     }//GEN-LAST:event_Casilla26MouseClicked
 
     private void Casilla27MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla27MouseClicked
@@ -574,15 +582,15 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla27MouseClicked
 
     private void Casilla28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla28MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerPregunta(FicheroBD);
     }//GEN-LAST:event_Casilla28MouseClicked
 
     private void Casilla29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla29MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerPregunta(FicheroFOL);
     }//GEN-LAST:event_Casilla29MouseClicked
 
     private void Casilla30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla30MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerPregunta(FicheroBD);
     }//GEN-LAST:event_Casilla30MouseClicked
 
     private void Casilla31MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla31MouseClicked
@@ -590,11 +598,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla31MouseClicked
 
     private void Casilla32MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla32MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerPregunta(FicheroSI);
     }//GEN-LAST:event_Casilla32MouseClicked
 
     private void Casilla33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla33MouseClicked
-        M1.leerPreguntaPro();
+        M1.leerPregunta(FicheroPRO);
     }//GEN-LAST:event_Casilla33MouseClicked
 
     private void Casilla34MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla34MouseClicked
@@ -602,15 +610,15 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla34MouseClicked
 
     private void Casilla35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla35MouseClicked
-        M1.leerPreguntaCod();
+        M1.leerPregunta(FicheroCOD);
     }//GEN-LAST:event_Casilla35MouseClicked
 
     private void Casilla36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla36MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerPregunta(FicheroLMSXI);
     }//GEN-LAST:event_Casilla36MouseClicked
 
     private void Casilla37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla37MouseClicked
-        M1.leerPreguntaCod();
+        M1.leerPregunta(FicheroCOD);
     }//GEN-LAST:event_Casilla37MouseClicked
 
     private void Casilla38MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla38MouseClicked
@@ -618,11 +626,11 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla38MouseClicked
 
     private void Casilla39MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla39MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerPregunta(FicheroBD);
     }//GEN-LAST:event_Casilla39MouseClicked
 
     private void Casilla40MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla40MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerPregunta(FicheroFOL);
     }//GEN-LAST:event_Casilla40MouseClicked
 
     private void Casilla41MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla41MouseClicked
@@ -630,7 +638,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla41MouseClicked
 
     private void Casilla42MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla42MouseClicked
-        M1.leerPreguntaPro();
+        M1.leerPregunta(FicheroPRO);
     }//GEN-LAST:event_Casilla42MouseClicked
 
     private void dadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dadoMouseClicked

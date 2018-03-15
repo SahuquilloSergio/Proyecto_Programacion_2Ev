@@ -11,7 +11,7 @@ public class PRO_Proyecto_2ev {
         MetodosPregunta obj1 = new MetodosPregunta();
         //obj1.añadirPreguntaPro();
         obj1.visualizar();
-        obj1.leerPreguntaPro();
+        //obj1.leerPregunta();
         MTablero T1 = new MTablero();
 //        obj1.añadirPreguntaPro();
 //        obj1.visualizar();
