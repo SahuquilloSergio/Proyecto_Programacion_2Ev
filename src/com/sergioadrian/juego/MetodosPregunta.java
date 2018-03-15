@@ -218,9 +218,9 @@ public class MetodosPregunta {
         }
     }
 
-    public void leerPreguntaPro() {
+    public void leerPregunta(File fichero) {
         try {
-            sc = new Scanner(new File(listaPro));
+            sc = new Scanner(fichero);
             pregunta = new ArrayList();
             /*
              * Bucle while que mientras, en el fichero, haya más líneas que leer
@@ -283,17 +283,16 @@ public class MetodosPregunta {
             for (int i = 0; i < (auxiliar.length - 1); i++) {
                 for (int j = i + 1; j < auxiliar.length; j++) {
                     if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
-                        //Intercambiamos valores
+                        // Se intercambian los valores:
                         String variableauxiliar = auxiliar[i];
                         auxiliar[i] = auxiliar[j];
                         auxiliar[j] = variableauxiliar;
-
                     }
                 }
             }
-
+            // Se imprime la pregunta:
             int opcion = Integer.parseInt(JOptionPane.showInputDialog(
-                    "Pregunta Programación:\n" + pregunta.get(numPregunta).getPregunta()
+                    "Pregunta:\n" + pregunta.get(numPregunta).getPregunta()
                     + "\n" + auxiliar[0]
                     + "\n" + auxiliar[1]
                     + "\n" + auxiliar[2]
