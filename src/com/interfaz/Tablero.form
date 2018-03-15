@@ -30,9 +30,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="33" red="66" type="rgb"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
       <Events>
@@ -48,9 +45,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="cc" red="ff" type="rgb"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
@@ -68,9 +62,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="0" red="ff" type="rgb"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
       <Events>
@@ -86,9 +77,6 @@
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="cc" red="33" type="rgb"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
@@ -106,9 +94,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="33" red="0" type="rgb"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
       <Events>
@@ -125,9 +110,6 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="66" red="ff" type="rgb"/>
         </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="QUESITO"/>
       </Properties>
       <Events>
@@ -141,9 +123,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla2">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla amarilla.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton8"/>
       </Properties>
       <Constraints>
@@ -154,9 +133,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla3">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton9"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[50, 25]"/>
@@ -173,9 +149,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla4">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla naranja.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton10"/>
       </Properties>
       <Events>
@@ -189,9 +162,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla5">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla verde.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton11"/>
       </Properties>
       <Events>
@@ -205,9 +175,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla6">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton12"/>
       </Properties>
       <Events>
@@ -221,9 +188,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla7">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla rosa.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton13"/>
       </Properties>
       <Events>
@@ -237,9 +201,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla9">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla rosa.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton14"/>
       </Properties>
       <Events>
@@ -253,9 +214,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla10">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton15"/>
       </Properties>
       <Events>
@@ -269,9 +227,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla11">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla amarilla.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton16"/>
       </Properties>
       <Events>
@@ -285,9 +240,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla12">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla marron.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton17"/>
       </Properties>
       <Events>
@@ -301,9 +253,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla13">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton18"/>
       </Properties>
       <Events>
@@ -317,9 +266,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla14">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla verde.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton19"/>
       </Properties>
       <Events>
@@ -333,9 +279,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla21">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla marron.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton20"/>
       </Properties>
       <Events>
@@ -349,9 +292,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla20">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton21"/>
       </Properties>
       <Events>
@@ -365,9 +305,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla19">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla azul.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton22"/>
       </Properties>
       <Events>
@@ -381,9 +318,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla18">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla rosa.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton23"/>
       </Properties>
       <Events>
@@ -397,9 +331,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla17">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton24"/>
       </Properties>
       <Events>
@@ -413,9 +344,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla16">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla verde.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton25"/>
       </Properties>
       <Events>
@@ -429,9 +357,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla23">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla marron.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
       <Events>
@@ -445,9 +370,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla24">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton2"/>
       </Properties>
       <Events>
@@ -461,9 +383,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla25">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla verde.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton3"/>
       </Properties>
       <Events>
@@ -477,9 +396,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla26">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla naranja.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton4"/>
       </Properties>
       <Events>
@@ -493,9 +409,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla27">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton5"/>
       </Properties>
       <Events>
@@ -509,9 +422,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla28">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla azul.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton6"/>
       </Properties>
       <Events>
@@ -525,9 +435,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla42">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla amarilla.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton7"/>
       </Properties>
       <Events>
@@ -541,9 +448,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla41">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton26"/>
       </Properties>
       <Events>
@@ -557,9 +461,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla40">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla rosa.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton27"/>
       </Properties>
       <Events>
@@ -573,9 +474,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla39">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla azul.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton28"/>
       </Properties>
       <Events>
@@ -589,9 +487,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla38">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton29"/>
       </Properties>
       <Events>
@@ -605,9 +500,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla37">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla naranja.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton30"/>
       </Properties>
       <Events>
@@ -621,9 +513,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla35">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla naranja.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton31"/>
       </Properties>
       <Events>
@@ -637,9 +526,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla34">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton32"/>
       </Properties>
       <Events>
@@ -653,9 +539,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla33">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla amarilla.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton33"/>
       </Properties>
       <Events>
@@ -669,9 +552,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla30">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla azul.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton34"/>
       </Properties>
       <Events>
@@ -685,9 +565,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla31">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla blanca.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton35"/>
       </Properties>
       <Events>
@@ -701,9 +578,6 @@
     </Component>
     <Component class="javax.swing.JButton" name="Casilla32">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\serxa\OneDrive\Documentos\NetBeansProjects\PRO_Proyecto_2ev\Media\casilla marron.jpg"/>
-        </Property>
         <Property name="text" type="java.lang.String" value="jButton36"/>
       </Properties>
       <Events>

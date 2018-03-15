@@ -1,0 +1,1 @@
+¿Qué se emprega para fusionar unha ou mais ramas dentro da rama que tes activa?,Merge,Branch,Fetch,Tag

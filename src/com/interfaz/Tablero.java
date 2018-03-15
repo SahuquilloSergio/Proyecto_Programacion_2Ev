@@ -6,6 +6,7 @@
 package com.interfaz;
 import com.sergioadrian.juego.MetodosPregunta;
 import com.sergioadrian.juego.MTablero;
+import java.io.File;
 
 /**
  *
@@ -21,6 +22,13 @@ public class Tablero extends javax.swing.JFrame {
     }
     MetodosPregunta M1 = new MetodosPregunta();
     MTablero T1 = new MTablero();
+    File FicheroPRO = new File("FicheroPreguntasPRO.txt");
+    File FicheroSI = new File("FicheroPreguntasSI.txt");
+    File FicheroLMSXI = new File("FicheroPreguntasLMSXI.txt");
+    File FicheroBD = new File("FicheroPreguntasBD.txt");
+    File FicheroFOL = new File("FicheroPreguntasFOL.txt");
+    File FicheroCOD = new File("FicheroPreguntasCOD.txt");
+    
     
 
     /**
