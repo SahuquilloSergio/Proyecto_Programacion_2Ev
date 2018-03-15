@@ -7,6 +7,9 @@ package com.interfaz;
 import com.sergioadrian.juego.MetodosPregunta;
 import com.sergioadrian.juego.MTablero;
 import java.io.File;
+import com.adriansergio.jugador.Jugador;
+import com.adriansergio.jugador.Turno;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,6 +31,7 @@ public class Tablero extends javax.swing.JFrame {
     File FicheroBD = new File("FicheroPreguntasBD.txt");
     File FicheroFOL = new File("FicheroPreguntasFOL.txt");
     File FicheroCOD = new File("FicheroPreguntasCOD.txt");
+    Turno Tu1 = new Turno();
     
     
 
@@ -83,12 +87,20 @@ public class Tablero extends javax.swing.JFrame {
         Casilla31 = new javax.swing.JButton();
         Casilla32 = new javax.swing.JButton();
         dado = new javax.swing.JButton();
+        Start = new javax.swing.JButton();
+        TurnoJ1 = new javax.swing.JButton();
+        TurnoJ2 = new javax.swing.JButton();
+        TurnoJ3 = new javax.swing.JButton();
+        TurnoJ4 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Casilla1.setBackground(new java.awt.Color(102, 51, 0));
-        Casilla1.setForeground(new java.awt.Color(0, 0, 0));
         Casilla1.setText("QUESITO");
         Casilla1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,7 +110,6 @@ public class Tablero extends javax.swing.JFrame {
         getContentPane().add(Casilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 193, -1, -1));
 
         Casilla22.setBackground(new java.awt.Color(255, 204, 0));
-        Casilla22.setForeground(new java.awt.Color(0, 0, 0));
         Casilla22.setText("QUESITO");
         Casilla22.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -108,27 +119,24 @@ public class Tablero extends javax.swing.JFrame {
         getContentPane().add(Casilla22, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
 
         Casilla29.setBackground(new java.awt.Color(255, 0, 255));
-        Casilla29.setForeground(new java.awt.Color(0, 0, 0));
         Casilla29.setText("QUESITO");
         Casilla29.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla29MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla29, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 80, 30));
+        getContentPane().add(Casilla29, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 90, 30));
 
         Casilla36.setBackground(new java.awt.Color(51, 204, 0));
-        Casilla36.setForeground(new java.awt.Color(0, 0, 0));
         Casilla36.setText("QUESITO");
         Casilla36.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla36MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla36, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 325, 80, 30));
+        getContentPane().add(Casilla36, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 325, 90, 30));
 
         Casilla8.setBackground(new java.awt.Color(0, 51, 153));
-        Casilla8.setForeground(new java.awt.Color(0, 0, 0));
         Casilla8.setText("QUESITO");
         Casilla8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -138,7 +146,6 @@ public class Tablero extends javax.swing.JFrame {
         getContentPane().add(Casilla8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, -1, -1));
 
         Casilla15.setBackground(new java.awt.Color(255, 102, 0));
-        Casilla15.setForeground(new java.awt.Color(0, 0, 0));
         Casilla15.setText("QUESITO");
         Casilla15.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -147,11 +154,9 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
-        Casilla2.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla amarilla.jpg")); // NOI18N
         Casilla2.setText("jButton8");
         getContentPane().add(Casilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 175, 50, 20));
 
-        Casilla3.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla3.setText("jButton9");
         Casilla3.setPreferredSize(new java.awt.Dimension(50, 25));
         Casilla3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,7 +166,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 155, 50, 20));
 
-        Casilla4.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla naranja.jpg")); // NOI18N
         Casilla4.setText("jButton10");
         Casilla4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -170,7 +174,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 135, 50, 20));
 
-        Casilla5.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla verde.jpg")); // NOI18N
         Casilla5.setText("jButton11");
         Casilla5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,7 +182,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 115, 50, 20));
 
-        Casilla6.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla6.setText("jButton12");
         Casilla6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -188,7 +190,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 95, 50, 20));
 
-        Casilla7.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla rosa.jpg")); // NOI18N
         Casilla7.setText("jButton13");
         Casilla7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -197,7 +198,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 75, 50, 20));
 
-        Casilla9.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla rosa.jpg")); // NOI18N
         Casilla9.setText("jButton14");
         Casilla9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -206,7 +206,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla9, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 30, 50, 20));
 
-        Casilla10.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla10.setText("jButton15");
         Casilla10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -215,7 +214,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 50, 20));
 
-        Casilla11.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla amarilla.jpg")); // NOI18N
         Casilla11.setText("jButton16");
         Casilla11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -224,7 +222,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 50, 20));
 
-        Casilla12.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla marron.jpg")); // NOI18N
         Casilla12.setText("jButton17");
         Casilla12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -233,7 +230,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 50, 20));
 
-        Casilla13.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla13.setText("jButton18");
         Casilla13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -242,7 +238,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 50, 20));
 
-        Casilla14.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla verde.jpg")); // NOI18N
         Casilla14.setText("jButton19");
         Casilla14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -251,7 +246,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 50, 20));
 
-        Casilla21.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla marron.jpg")); // NOI18N
         Casilla21.setText("jButton20");
         Casilla21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -260,7 +254,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla21, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 50, 20));
 
-        Casilla20.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla20.setText("jButton21");
         Casilla20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -269,7 +262,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 50, 20));
 
-        Casilla19.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla azul.jpg")); // NOI18N
         Casilla19.setText("jButton22");
         Casilla19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -278,7 +270,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 50, 20));
 
-        Casilla18.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla rosa.jpg")); // NOI18N
         Casilla18.setText("jButton23");
         Casilla18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -287,7 +278,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla18, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 50, 20));
 
-        Casilla17.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla17.setText("jButton24");
         Casilla17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -296,7 +286,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 50, 20));
 
-        Casilla16.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla verde.jpg")); // NOI18N
         Casilla16.setText("jButton25");
         Casilla16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -305,7 +294,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 50, 20));
 
-        Casilla23.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla marron.jpg")); // NOI18N
         Casilla23.setText("jButton1");
         Casilla23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -314,7 +302,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla23, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 50, 20));
 
-        Casilla24.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla24.setText("jButton2");
         Casilla24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -323,7 +310,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 50, 20));
 
-        Casilla25.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla verde.jpg")); // NOI18N
         Casilla25.setText("jButton3");
         Casilla25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -332,7 +318,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla25, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 50, 20));
 
-        Casilla26.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla naranja.jpg")); // NOI18N
         Casilla26.setText("jButton4");
         Casilla26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -341,7 +326,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla26, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 50, 20));
 
-        Casilla27.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla27.setText("jButton5");
         Casilla27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -350,7 +334,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla27, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 50, 20));
 
-        Casilla28.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla azul.jpg")); // NOI18N
         Casilla28.setText("jButton6");
         Casilla28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -359,7 +342,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla28, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 50, 20));
 
-        Casilla42.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla amarilla.jpg")); // NOI18N
         Casilla42.setText("jButton7");
         Casilla42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -368,7 +350,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla42, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 216, 50, 20));
 
-        Casilla41.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla41.setText("jButton26");
         Casilla41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -377,7 +358,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla41, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 234, 50, 20));
 
-        Casilla40.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla rosa.jpg")); // NOI18N
         Casilla40.setText("jButton27");
         Casilla40.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -386,7 +366,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla40, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 252, 50, 20));
 
-        Casilla39.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla azul.jpg")); // NOI18N
         Casilla39.setText("jButton28");
         Casilla39.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -395,7 +374,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla39, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 270, 50, 20));
 
-        Casilla38.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla38.setText("jButton29");
         Casilla38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -404,7 +382,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla38, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 288, 50, 20));
 
-        Casilla37.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla naranja.jpg")); // NOI18N
         Casilla37.setText("jButton30");
         Casilla37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -413,7 +390,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla37, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 306, 50, 20));
 
-        Casilla35.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla naranja.jpg")); // NOI18N
         Casilla35.setText("jButton31");
         Casilla35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -422,7 +398,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla35, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 354, 50, 20));
 
-        Casilla34.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla34.setText("jButton32");
         Casilla34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -431,7 +406,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla34, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 375, 50, 20));
 
-        Casilla33.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla amarilla.jpg")); // NOI18N
         Casilla33.setText("jButton33");
         Casilla33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -440,16 +414,14 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla33, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 50, 20));
 
-        Casilla30.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla azul.jpg")); // NOI18N
         Casilla30.setText("jButton34");
         Casilla30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla30MouseClicked(evt);
             }
         });
-        getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 60, 20));
+        getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 50, 20));
 
-        Casilla31.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla blanca.jpg")); // NOI18N
         Casilla31.setText("jButton35");
         Casilla31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -458,7 +430,6 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 50, 20));
 
-        Casilla32.setIcon(new javax.swing.ImageIcon("C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\PRO_Proyecto_2ev\\Media\\casilla marron.jpg")); // NOI18N
         Casilla32.setText("jButton36");
         Casilla32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -473,6 +444,58 @@ public class Tablero extends javax.swing.JFrame {
             }
         });
         getContentPane().add(dado, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 60, 60));
+
+        Start.setText("Iniciar Partida");
+        Start.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                StartMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Start, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, -1, -1));
+
+        TurnoJ1.setText("Turno J1");
+        TurnoJ1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TurnoJ1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(TurnoJ1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, -1, -1));
+
+        TurnoJ2.setText("Turno J2");
+        TurnoJ2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TurnoJ2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(TurnoJ2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, -1, -1));
+
+        TurnoJ3.setText("Turno J3");
+        TurnoJ3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TurnoJ3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(TurnoJ3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, -1, -1));
+
+        TurnoJ4.setText("Turno J4");
+        TurnoJ4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TurnoJ4MouseClicked(evt);
+            }
+        });
+        getContentPane().add(TurnoJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 450, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 110, 50));
+
+        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 110, 50));
+
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 110, 50));
+
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 110, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -643,7 +666,28 @@ public class Tablero extends javax.swing.JFrame {
 
     private void dadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dadoMouseClicked
         T1.tirarDado();
+        
     }//GEN-LAST:event_dadoMouseClicked
+
+    private void StartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_StartMouseClicked
+        JOptionPane.showMessageDialog(null,"Juego Iniciado");
+    }//GEN-LAST:event_StartMouseClicked
+
+    private void TurnoJ2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TurnoJ2MouseClicked
+        JOptionPane.showMessageDialog(null, "Turno del Jugador 2");
+    }//GEN-LAST:event_TurnoJ2MouseClicked
+
+    private void TurnoJ1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TurnoJ1MouseClicked
+        JOptionPane.showMessageDialog(null, "Turno del Jugador1");
+    }//GEN-LAST:event_TurnoJ1MouseClicked
+
+    private void TurnoJ3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TurnoJ3MouseClicked
+        JOptionPane.showMessageDialog(null, "Turno del Jugador3");
+    }//GEN-LAST:event_TurnoJ3MouseClicked
+
+    private void TurnoJ4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TurnoJ4MouseClicked
+        JOptionPane.showMessageDialog(null, "Turno del Jugador4");
+    }//GEN-LAST:event_TurnoJ4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -723,6 +767,15 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JButton Casilla7;
     private javax.swing.JButton Casilla8;
     private javax.swing.JButton Casilla9;
+    private javax.swing.JButton Start;
+    private javax.swing.JButton TurnoJ1;
+    private javax.swing.JButton TurnoJ2;
+    private javax.swing.JButton TurnoJ3;
+    private javax.swing.JButton TurnoJ4;
     private javax.swing.JButton dado;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }
