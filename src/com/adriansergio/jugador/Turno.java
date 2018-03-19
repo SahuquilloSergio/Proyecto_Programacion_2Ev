@@ -44,7 +44,7 @@ public class Turno {
             Clip sonido = AudioSystem.getClip();
             
             // Se carga con un fichero wav
-            sonido.open(AudioSystem.getAudioInputStream(new File("Fail.wav")));
+            sonido.open(AudioSystem.getAudioInputStream(new File("Error.wav")));
             
             // Comienza la reproducción
             sonido.start();
@@ -60,30 +60,6 @@ public class Turno {
         }
         }
         
-        
-        public void SonidoQuesitoProgramacion(){
-                        
-           try {
-            
-            // Se obtiene un Clip de sonido
-            Clip sonido = AudioSystem.getClip();
-            
-            // Se carga con un fichero wav
-            sonido.open(AudioSystem.getAudioInputStream(new File("Fail.wav")));
-            
-            // Comienza la reproducción
-            sonido.start();
-            
-            // Espera mientras se esté reproduciendo.
-            while (sonido.isRunning())
-                Thread.sleep(1000);
-            
-            // Se cierra el clip.
-            sonido.close();
-        } catch (Exception e) {
-            System.out.println("" + e);
-        }
-        }
             
            
         
