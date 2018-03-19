@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 import com.adriansergio.jugador.Turno;
+import com.adriansergio.jugador.Jugador;
 
 /**
  *
@@ -36,7 +37,7 @@ public class MetodosPregunta {
     int bucle;
     String[] lista;
     File fichero;
-
+    Jugador J1 = new Jugador();
     /**
      * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a
      * gestionar con un switch case la inserción de preguntas a ficheros.
@@ -232,6 +233,101 @@ public class MetodosPregunta {
             sc.close();
         }
     }
+    
+    public void leerQuesitoPro(){
+        try {
+            sc = new Scanner(new File(listaPro));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Programación:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoPro(true);
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
+         
+    }
 
     public void leerPreguntaSis() {
 
@@ -316,6 +412,100 @@ public class MetodosPregunta {
             if (opcion == numRespuesta1) {
                 turno.SonidoAcertarPreguntaNormal();
                 JOptionPane.showMessageDialog(null, "Has acertado, vuelves a tirar!");
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
+    }
+    
+    public void leerQuesitoSis(){
+         try {
+            sc = new Scanner(new File(listaSis));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Sistemas Informaticos:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoSis(true);
             } else {
                 turno.SonidoFallarPregunta();
                 JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
@@ -422,6 +612,99 @@ public class MetodosPregunta {
 
     }
 
+    public void leerQuesitoBds(){
+        try {
+            sc = new Scanner(new File(listaBds));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Bases de Datos:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoBds(true);
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
+    }
     public void leerPreguntaLmsxi() {
         
                 try {
@@ -517,6 +800,99 @@ public class MetodosPregunta {
 
     }
 
+    public void leerQuesitoLmsxi(){
+        try {
+            sc = new Scanner(new File(listaLmsxi));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Lenguaje de Marcas:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoLms(true);
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
+    }
     public void leerPreguntaFol() {
         
                 try {
@@ -611,7 +987,99 @@ public class MetodosPregunta {
         }
 
     }
-
+    public void leerQuesitoFol(){
+        try {
+            sc = new Scanner(new File(listaFol));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Formación y Orientación Laboral:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoFol(true);
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
+    }
     public void leerPreguntaCod() {
         
                 try {
@@ -705,6 +1173,100 @@ public class MetodosPregunta {
             sc.close();
         }
 
+    }
+    
+    public void leerQuestitoCod(){
+        try {
+            sc = new Scanner(new File(listaCod));
+            pregunta = new ArrayList();
+            /*
+             * Bucle while que mientras, en el fichero, haya más líneas que leer
+             * las incorpora a un Array de tipo String, separando los componentes
+             * por un delimitador que se ha asignado previamente. A continuación
+             * se añade al ArrayList pregunta.
+             */
+            while (sc.hasNextLine()) {
+                linea = sc.nextLine();
+                lista = new String[5];
+                lista = linea.split(delim);
+                Pregunta p = new Pregunta(lista[0], lista[1], lista[2], lista[3], lista[4]);
+                pregunta.add(p);
+            }
+            // Se crean y se inicializan las variables a utilizar en la pregunta.
+            int finalRes = 4;
+            int principioRes = 1;
+            int pre = 0;
+            Random num = new Random(System.nanoTime());
+            int numRespuesta1;
+            int numRespuesta2;
+            int numRespuesta3;
+            int numRespuesta4;
+            /*
+             * Se crea otro número aleatorio que seleccionará de forma aleatoria 
+             * una pregunta de las almacenadas en el fichero.
+             */
+            int numPregunta = num.nextInt((pregunta.size() - 1) - pre + 1) + pre;
+            // Crea un número aleatorio entre 1 y 4 y se almacena en la variable
+            numRespuesta1 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            /*
+             * Bucle do while que se emplea en cada una de las respuestas
+             * siguientes que generará otro número aleatorio para esa respuesta
+             * y seguirá generándolo hasta que no coincida.
+             */
+            do {
+                numRespuesta2 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta2);
+            do {
+                numRespuesta3 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta3 || numRespuesta2 == numRespuesta3);
+            do {
+                numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
+            } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
+            // Se crea una variable auxilar para imprimir las respuestas:
+            String[] auxiliar = new String[4];
+            String numero1 = Integer.toString(numRespuesta1);
+            String res1 = pregunta.get(numPregunta).getRes1();
+            auxiliar[0] = numero1 + ") " + res1;
+            String numero2 = Integer.toString(numRespuesta2);
+            String res2 = pregunta.get(numPregunta).getRes2();
+            auxiliar[1] = numero2 + ") " + res2;
+            String numero3 = Integer.toString(numRespuesta3);
+            String res3 = pregunta.get(numPregunta).getRes3();
+            auxiliar[2] = numero3 + ") " + res3;
+            String numero4 = Integer.toString(numRespuesta4);
+            String res4 = pregunta.get(numPregunta).getRes4();
+            auxiliar[3] = numero4 + ") " + res4;
+            // Se ordena el array:
+            for (int i = 0; i < (auxiliar.length - 1); i++) {
+                for (int j = i + 1; j < auxiliar.length; j++) {
+                    if (auxiliar[i].compareToIgnoreCase(auxiliar[j]) > 0) {
+                        // Se intercambian los valores:
+                        String variableauxiliar = auxiliar[i];
+                        auxiliar[i] = auxiliar[j];
+                        auxiliar[j] = variableauxiliar;
+                    }
+                }
+            }
+            int opcion = Integer.parseInt(JOptionPane.showInputDialog(
+                    "Pregunta Contornos de Desarrollo:\n" + pregunta.get(numPregunta).getPregunta()
+                    + "\n" + auxiliar[0]
+                    + "\n" + auxiliar[1]
+                    + "\n" + auxiliar[2]
+                    + "\n" + auxiliar[3]));
+            // Estructura condicional if/else en la que se indica si se acierta la pregunta.           
+            if (opcion == numRespuesta1) {
+                turno.SonidoAcertarPreguntaNormal();
+                JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
+                J1.setQuesitoCod(true);
+            } else {
+                turno.SonidoFallarPregunta();
+                JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Pregunta.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            sc.close();
+        }
     }
 
     public void visualizar() {

@@ -154,10 +154,10 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, -1, -1));
 
-        Casilla2.setText("jButton8");
+        Casilla2.setBackground(new java.awt.Color(255, 204, 0));
         getContentPane().add(Casilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 175, 50, 20));
 
-        Casilla3.setText("jButton9");
+        Casilla3.setBackground(new java.awt.Color(255, 255, 255));
         Casilla3.setPreferredSize(new java.awt.Dimension(50, 25));
         Casilla3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -166,7 +166,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 155, 50, 20));
 
-        Casilla4.setText("jButton10");
+        Casilla4.setBackground(new java.awt.Color(255, 102, 0));
         Casilla4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla4MouseClicked(evt);
@@ -174,7 +174,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 135, 50, 20));
 
-        Casilla5.setText("jButton11");
+        Casilla5.setBackground(new java.awt.Color(51, 204, 0));
         Casilla5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla5MouseClicked(evt);
@@ -182,7 +182,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 115, 50, 20));
 
-        Casilla6.setText("jButton12");
+        Casilla6.setBackground(new java.awt.Color(255, 255, 255));
         Casilla6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla6MouseClicked(evt);
@@ -190,7 +190,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 95, 50, 20));
 
-        Casilla7.setText("jButton13");
+        Casilla7.setBackground(new java.awt.Color(255, 0, 255));
         Casilla7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla7MouseClicked(evt);
@@ -198,7 +198,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 75, 50, 20));
 
-        Casilla9.setText("jButton14");
+        Casilla9.setBackground(new java.awt.Color(255, 0, 255));
         Casilla9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla9MouseClicked(evt);
@@ -206,7 +206,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla9, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 30, 50, 20));
 
-        Casilla10.setText("jButton15");
+        Casilla10.setBackground(new java.awt.Color(255, 255, 255));
         Casilla10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla10MouseClicked(evt);
@@ -214,7 +214,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 50, 20));
 
-        Casilla11.setText("jButton16");
+        Casilla11.setBackground(new java.awt.Color(255, 204, 0));
         Casilla11.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla11MouseClicked(evt);
@@ -222,7 +222,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla11, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 0, 50, 20));
 
-        Casilla12.setText("jButton17");
+        Casilla12.setBackground(new java.awt.Color(102, 51, 0));
         Casilla12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla12MouseClicked(evt);
@@ -230,7 +230,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla12, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 50, 20));
 
-        Casilla13.setText("jButton18");
+        Casilla13.setBackground(new java.awt.Color(255, 255, 255));
         Casilla13.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla13MouseClicked(evt);
@@ -238,7 +238,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 50, 20));
 
-        Casilla14.setText("jButton19");
+        Casilla14.setBackground(new java.awt.Color(51, 204, 0));
         Casilla14.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla14MouseClicked(evt);
@@ -246,7 +246,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 50, 20));
 
-        Casilla21.setText("jButton20");
+        Casilla21.setBackground(new java.awt.Color(102, 51, 0));
         Casilla21.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla21MouseClicked(evt);
@@ -254,7 +254,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla21, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 50, 20));
 
-        Casilla20.setText("jButton21");
+        Casilla20.setBackground(new java.awt.Color(255, 255, 255));
         Casilla20.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla20MouseClicked(evt);
@@ -262,7 +262,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla20, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 50, 20));
 
-        Casilla19.setText("jButton22");
+        Casilla19.setBackground(new java.awt.Color(0, 51, 153));
         Casilla19.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla19MouseClicked(evt);
@@ -270,7 +270,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla19, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 50, 20));
 
-        Casilla18.setText("jButton23");
+        Casilla18.setBackground(new java.awt.Color(255, 0, 255));
         Casilla18.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla18MouseClicked(evt);
@@ -278,7 +278,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla18, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 50, 20));
 
-        Casilla17.setText("jButton24");
+        Casilla17.setBackground(new java.awt.Color(255, 255, 255));
         Casilla17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla17MouseClicked(evt);
@@ -286,7 +286,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla17, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 90, 50, 20));
 
-        Casilla16.setText("jButton25");
+        Casilla16.setBackground(new java.awt.Color(51, 204, 0));
         Casilla16.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla16MouseClicked(evt);
@@ -294,7 +294,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 50, 20));
 
-        Casilla23.setText("jButton1");
+        Casilla23.setBackground(new java.awt.Color(102, 51, 0));
         Casilla23.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla23MouseClicked(evt);
@@ -302,7 +302,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla23, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, 50, 20));
 
-        Casilla24.setText("jButton2");
+        Casilla24.setBackground(new java.awt.Color(255, 255, 255));
         Casilla24.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla24MouseClicked(evt);
@@ -310,7 +310,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla24, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 50, 20));
 
-        Casilla25.setText("jButton3");
+        Casilla25.setBackground(new java.awt.Color(51, 204, 0));
         Casilla25.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla25MouseClicked(evt);
@@ -318,7 +318,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla25, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 50, 20));
 
-        Casilla26.setText("jButton4");
+        Casilla26.setBackground(new java.awt.Color(255, 102, 0));
         Casilla26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla26MouseClicked(evt);
@@ -326,7 +326,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla26, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 50, 20));
 
-        Casilla27.setText("jButton5");
+        Casilla27.setBackground(new java.awt.Color(255, 255, 255));
         Casilla27.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla27MouseClicked(evt);
@@ -334,7 +334,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla27, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 50, 20));
 
-        Casilla28.setText("jButton6");
+        Casilla28.setBackground(new java.awt.Color(0, 51, 153));
         Casilla28.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla28MouseClicked(evt);
@@ -342,7 +342,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla28, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 50, 20));
 
-        Casilla42.setText("jButton7");
+        Casilla42.setBackground(new java.awt.Color(255, 204, 0));
         Casilla42.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla42MouseClicked(evt);
@@ -350,7 +350,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla42, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 216, 50, 20));
 
-        Casilla41.setText("jButton26");
+        Casilla41.setBackground(new java.awt.Color(255, 255, 255));
         Casilla41.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla41MouseClicked(evt);
@@ -358,7 +358,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla41, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 234, 50, 20));
 
-        Casilla40.setText("jButton27");
+        Casilla40.setBackground(new java.awt.Color(255, 0, 255));
         Casilla40.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla40MouseClicked(evt);
@@ -366,7 +366,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla40, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 252, 50, 20));
 
-        Casilla39.setText("jButton28");
+        Casilla39.setBackground(new java.awt.Color(0, 51, 153));
         Casilla39.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla39MouseClicked(evt);
@@ -374,7 +374,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla39, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 270, 50, 20));
 
-        Casilla38.setText("jButton29");
+        Casilla38.setBackground(new java.awt.Color(255, 255, 255));
         Casilla38.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla38MouseClicked(evt);
@@ -382,7 +382,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla38, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 288, 50, 20));
 
-        Casilla37.setText("jButton30");
+        Casilla37.setBackground(new java.awt.Color(255, 102, 0));
         Casilla37.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla37MouseClicked(evt);
@@ -390,7 +390,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla37, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 306, 50, 20));
 
-        Casilla35.setText("jButton31");
+        Casilla35.setBackground(new java.awt.Color(255, 102, 0));
         Casilla35.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla35MouseClicked(evt);
@@ -398,7 +398,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla35, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 354, 50, 20));
 
-        Casilla34.setText("jButton32");
+        Casilla34.setBackground(new java.awt.Color(255, 255, 255));
         Casilla34.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla34MouseClicked(evt);
@@ -406,7 +406,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla34, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 375, 50, 20));
 
-        Casilla33.setText("jButton33");
+        Casilla33.setBackground(new java.awt.Color(255, 204, 0));
         Casilla33.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla33MouseClicked(evt);
@@ -414,7 +414,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla33, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 50, 20));
 
-        Casilla30.setText("jButton34");
+        Casilla30.setBackground(new java.awt.Color(0, 51, 153));
         Casilla30.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla30MouseClicked(evt);
@@ -422,7 +422,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla30, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 50, 20));
 
-        Casilla31.setText("jButton35");
+        Casilla31.setBackground(new java.awt.Color(255, 255, 255));
         Casilla31.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla31MouseClicked(evt);
@@ -430,7 +430,7 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 50, 20));
 
-        Casilla32.setText("jButton36");
+        Casilla32.setBackground(new java.awt.Color(102, 51, 0));
         Casilla32.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Casilla32MouseClicked(evt);
@@ -501,7 +501,7 @@ public class Tablero extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Casilla1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla1MouseClicked
-        M1.leerPreguntaSis();
+        M1.leerQuesitoSis();
     }//GEN-LAST:event_Casilla1MouseClicked
 
     private void Casilla3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla3MouseClicked
@@ -525,7 +525,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla7MouseClicked
 
     private void Casilla8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla8MouseClicked
-        M1.leerPreguntaBds();
+        M1.leerQuesitoBds();
     }//GEN-LAST:event_Casilla8MouseClicked
 
     private void Casilla9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla9MouseClicked
@@ -549,7 +549,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla13MouseClicked
 
     private void Casilla14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla14MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerQuesitoLmsxi();
     }//GEN-LAST:event_Casilla14MouseClicked
 
     private void Casilla15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla15MouseClicked
@@ -581,7 +581,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla21MouseClicked
 
     private void Casilla22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla22MouseClicked
-        M1.leerPreguntaPro();
+        M1.leerQuesitoPro();
     }//GEN-LAST:event_Casilla22MouseClicked
 
     private void Casilla23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla23MouseClicked
@@ -609,7 +609,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla28MouseClicked
 
     private void Casilla29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla29MouseClicked
-        M1.leerPreguntaFol();
+        M1.leerQuesitoFol();
     }//GEN-LAST:event_Casilla29MouseClicked
 
     private void Casilla30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla30MouseClicked
@@ -637,7 +637,7 @@ public class Tablero extends javax.swing.JFrame {
     }//GEN-LAST:event_Casilla35MouseClicked
 
     private void Casilla36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla36MouseClicked
-        M1.leerPreguntaLmsxi();
+        M1.leerQuesitoLmsxi();
     }//GEN-LAST:event_Casilla36MouseClicked
 
     private void Casilla37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla37MouseClicked
