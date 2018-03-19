@@ -695,6 +695,8 @@ public class MetodosPregunta {
                 turno.SonidoAcertarPreguntaNormal();
                 JOptionPane.showMessageDialog(null, "Has acertado, ganas un quesito y vuelves a tirar!");
                 J1.setQuesitoBds(true);
+                
+                    
             } else {
                 turno.SonidoFallarPregunta();
                 JOptionPane.showMessageDialog(null, "Has fallado, suerte en la próxima!");

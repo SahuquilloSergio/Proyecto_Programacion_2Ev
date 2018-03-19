@@ -1,5 +1,7 @@
 package com.adriansergio.jugador;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author abrandarizdominguez & ssahuquilloembade
@@ -124,6 +126,14 @@ public class Jugador {
         return nombre + "," + puntuacion + "," + activo + "," + quesitoPro + ","
                 + quesitoSis + "," + quesitoBds + "," + quesitoCod + ","
                 + quesitoFol + "," + quesitoLms + "," + superQuesito;
+    }
+    
+    public void ganar(){
+        if (quesitoSis&&quesitoPro&&quesitoBds&&quesitoCod&&quesitoFol&&quesitoLms==true){
+            JOptionPane.showMessageDialog(null, "ENHORABUENA, HAS GANADO");
+        } else {
+            
+        }
     }
 
 }

@@ -32,6 +32,7 @@ public class Tablero extends javax.swing.JFrame {
     File FicheroFOL = new File("FicheroPreguntasFOL.txt");
     File FicheroCOD = new File("FicheroPreguntasCOD.txt");
     Turno Tu1 = new Turno();
+    Jugador J1 = new Jugador();
     
     
 
@@ -92,10 +93,6 @@ public class Tablero extends javax.swing.JFrame {
         TurnoJ2 = new javax.swing.JButton();
         TurnoJ3 = new javax.swing.JButton();
         TurnoJ4 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -438,12 +435,15 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(Casilla32, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, 50, 20));
 
+        dado.setBackground(new java.awt.Color(255, 255, 255));
+        dado.setForeground(new java.awt.Color(0, 0, 0));
+        dado.setText("DADO");
         dado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 dadoMouseClicked(evt);
             }
         });
-        getContentPane().add(dado, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 60, 60));
+        getContentPane().add(dado, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 10, 70, 70));
 
         Start.setText("Iniciar Partida");
         Start.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -485,23 +485,12 @@ public class Tablero extends javax.swing.JFrame {
         });
         getContentPane().add(TurnoJ4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 450, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 110, 50));
-
-        jPanel3.setBackground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 110, 50));
-
-        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, 110, 50));
-
-        jPanel5.setBackground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 110, 50));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Casilla1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla1MouseClicked
         M1.leerQuesitoSis();
+        J1.ganar();
     }//GEN-LAST:event_Casilla1MouseClicked
 
     private void Casilla3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla3MouseClicked
@@ -526,6 +515,7 @@ public class Tablero extends javax.swing.JFrame {
 
     private void Casilla8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla8MouseClicked
         M1.leerQuesitoBds();
+        J1.ganar();
     }//GEN-LAST:event_Casilla8MouseClicked
 
     private void Casilla9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla9MouseClicked
@@ -550,6 +540,7 @@ public class Tablero extends javax.swing.JFrame {
 
     private void Casilla14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla14MouseClicked
         M1.leerQuesitoLmsxi();
+        J1.ganar();
     }//GEN-LAST:event_Casilla14MouseClicked
 
     private void Casilla15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla15MouseClicked
@@ -582,6 +573,7 @@ public class Tablero extends javax.swing.JFrame {
 
     private void Casilla22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla22MouseClicked
         M1.leerQuesitoPro();
+        J1.ganar();
     }//GEN-LAST:event_Casilla22MouseClicked
 
     private void Casilla23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla23MouseClicked
@@ -610,6 +602,7 @@ public class Tablero extends javax.swing.JFrame {
 
     private void Casilla29MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla29MouseClicked
         M1.leerQuesitoFol();
+        J1.ganar();
     }//GEN-LAST:event_Casilla29MouseClicked
 
     private void Casilla30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla30MouseClicked
@@ -638,6 +631,7 @@ public class Tablero extends javax.swing.JFrame {
 
     private void Casilla36MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla36MouseClicked
         M1.leerQuesitoLmsxi();
+        J1.ganar();
     }//GEN-LAST:event_Casilla36MouseClicked
 
     private void Casilla37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Casilla37MouseClicked
@@ -773,9 +767,5 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JButton TurnoJ3;
     private javax.swing.JButton TurnoJ4;
     private javax.swing.JButton dado;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     // End of variables declaration//GEN-END:variables
 }
