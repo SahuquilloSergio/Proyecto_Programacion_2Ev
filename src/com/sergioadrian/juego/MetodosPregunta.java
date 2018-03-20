@@ -36,6 +36,7 @@ public class MetodosPregunta {
     String[] lista;
     File fichero;
     Jugador J1 = new Jugador();
+    
     /**
      * Método menuAñadir, que no pide nada y no devuelve nada, que ayuda a
      * gestionar con un switch case la inserción de preguntas a ficheros.
@@ -139,6 +140,11 @@ public class MetodosPregunta {
         }
     }
 
+    /**
+     * Método "leerPregunta" en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaPro() {
         try {
             sc = new Scanner(new File(listaPro));
@@ -186,7 +192,7 @@ public class MetodosPregunta {
             do {
                 numRespuesta4 = num.nextInt(finalRes - principioRes + 1) + principioRes;
             } while (numRespuesta1 == numRespuesta4 || numRespuesta2 == numRespuesta4 || numRespuesta3 == numRespuesta4);
-            // Se crea una variable auxilar para imprimir las respuestas:
+            // Se crea un array auxilar para imprimir las respuestas:
             String[] auxiliar = new String[4];
             String numero1 = Integer.toString(numRespuesta1);
             String res1 = pregunta.get(numPregunta).getRes1();
@@ -232,6 +238,11 @@ public class MetodosPregunta {
         }
     }
     
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuesitoPro(){
         try {
             sc = new Scanner(new File(listaPro));
@@ -327,6 +338,11 @@ public class MetodosPregunta {
          
     }
 
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaSis() {
 
                 try {
@@ -421,6 +437,11 @@ public class MetodosPregunta {
         }
     }
     
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuesitoSis(){
          try {
             sc = new Scanner(new File(listaSis));
@@ -515,6 +536,11 @@ public class MetodosPregunta {
         }
     }
 
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaBds() {
         
                 try {
@@ -610,6 +636,11 @@ public class MetodosPregunta {
 
     }
 
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuesitoBds(){
         try {
             sc = new Scanner(new File(listaBds));
@@ -705,6 +736,12 @@ public class MetodosPregunta {
             sc.close();
         }
     }
+    
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaLmsxi() {
         
                 try {
@@ -800,6 +837,11 @@ public class MetodosPregunta {
 
     }
 
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuesitoLmsxi(){
         try {
             sc = new Scanner(new File(listaLmsxi));
@@ -893,6 +935,12 @@ public class MetodosPregunta {
             sc.close();
         }
     }
+    
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaFol() {
         
                 try {
@@ -987,6 +1035,12 @@ public class MetodosPregunta {
         }
 
     }
+    
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuesitoFol(){
         try {
             sc = new Scanner(new File(listaFol));
@@ -1080,6 +1134,12 @@ public class MetodosPregunta {
             sc.close();
         }
     }
+    
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerPreguntaCod() {
         
                 try {
@@ -1175,6 +1235,11 @@ public class MetodosPregunta {
 
     }
     
+    /**
+     * Método en el que se lee el contenido del fichero y se 
+     * añade a un arrayList - Se escoge una pregunta de forma aleatoria y 
+     * se desordenan sus respuestas.
+     */
     public void leerQuestitoCod(){
         try {
             sc = new Scanner(new File(listaCod));
@@ -1269,6 +1334,10 @@ public class MetodosPregunta {
         }
     }
 
+    /**
+     * Método "Visualizar" en el que se lee el contenido del fichero y se 
+     * muestran todas las preguntas que contenga.
+     */
     public void visualizar() {
         pregunta = new ArrayList();
         String ac = "";
