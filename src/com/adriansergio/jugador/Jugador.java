@@ -28,15 +28,17 @@ public class Jugador {
     private boolean quesitoLms = false;
     private boolean superQuesito = false;
 
+    // Constructor por defecto:
     public Jugador() {
 
     }
 
+    // Constructor por parámetros:
     public Jugador(String nombre) {
         this.nombre = nombre;
     }
 
-    // SETS Y GETS:
+    // Métodos de acceso: SETS Y GETS
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
