@@ -7,10 +7,12 @@ package com.sergioadrian.juego;
 public class Pregunta {
     
     private String pregunta, res1, res2, res3, res4;
-
+    
+    // Constructor por defecto:
     public Pregunta() {
     }
 
+    // Constructor por parámetros:
     public Pregunta(String pregunta, String res1, String res2, String res3, String res4) {
         this.pregunta = pregunta;
         this.res1 = res1;
@@ -19,6 +21,7 @@ public class Pregunta {
         this.res4 = res4;
     }
 
+    // Métodos de acceso: SETS Y GETS
     public void setPregunta(String pregunta) {
         this.pregunta = pregunta;
     }
@@ -59,6 +62,7 @@ public class Pregunta {
         return res4;
     }
 
+    // Método "toString"
     @Override
     public String toString() {
         return pregunta + "," + res1 + "," + res2 + "," 
