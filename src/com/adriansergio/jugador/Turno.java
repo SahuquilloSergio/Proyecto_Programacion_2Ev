@@ -3,14 +3,9 @@ package com.adriansergio.jugador;
 import java.io.File;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JOptionPane;
 
 public class Turno {
      int num;
-    public void tirarDado(){
-       num = (int) (Math.random()*6+1);
-        //System.out.println(num);
-    }
     
         public void SonidoAcertarPreguntaNormal(){
             

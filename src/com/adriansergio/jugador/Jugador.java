@@ -1,5 +1,6 @@
 package com.adriansergio.jugador;
 
+import Juego.Excepciones;
 import javax.swing.JOptionPane;
 
 /**
@@ -129,11 +130,17 @@ public class Jugador {
     }
     
     public void ganar(){
-        if (quesitoSis&&quesitoPro&&quesitoBds&&quesitoCod&&quesitoFol&&quesitoLms==true){
+        
+            if (quesitoSis&&quesitoPro&&quesitoBds&&quesitoCod&&quesitoFol&&quesitoLms==true){
             JOptionPane.showMessageDialog(null, "ENHORABUENA, HAS GANADO");
         } else {
+            }
+        
+        }
+
             
         }
-    }
+        
+    
 
-}
+
