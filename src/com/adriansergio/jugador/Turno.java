@@ -15,7 +15,7 @@ public class Turno {
             Clip sonido = AudioSystem.getClip();
             
             // Se carga con un fichero wav
-            sonido.open(AudioSystem.getAudioInputStream(new File("MarioCoin.wav")));
+            sonido.open(AudioSystem.getAudioInputStream(new File("C:\\Users\\serxa\\Downloads\\MarioCoin.wav")));
             
             // Comienza la reproducción
             sonido.start();
@@ -39,7 +39,7 @@ public class Turno {
             Clip sonido = AudioSystem.getClip();
             
             // Se carga con un fichero wav
-            sonido.open(AudioSystem.getAudioInputStream(new File("Error.wav")));
+            sonido.open(AudioSystem.getAudioInputStream(new File("C:\\Users\\serxa\\Downloads\\Error.wav")));
             
             // Comienza la reproducción
             sonido.start();

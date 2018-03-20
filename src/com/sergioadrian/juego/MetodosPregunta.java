@@ -22,12 +22,12 @@ public class MetodosPregunta {
 
     Turno turno = new Turno();
     PrintWriter pw;
-    String listaPro = "FicheroPreguntasPRO.txt";
-    String listaSis = "FicheroPreguntasSI.txt";
-    String listaBds = "FicheroPreguntasBD.txt";
-    String listaLmsxi = "FicheroPreguntasLMSXI.txt";
-    String listaFol = "FicheroPreguntasFOL.txt";
-    String listaCod = "FicheroPreguntasCOD.txt";
+    String listaPro = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasPRO.txt";
+    String listaSis = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasSI.txt";
+    String listaBds = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasBD.txt";
+    String listaLmsxi = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasLMSXI.txt";
+    String listaFol = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasFOL.txt";
+    String listaCod = "C:\\Users\\serxa\\OneDrive\\Documentos\\NetBeansProjects\\Proyecto2ev\\FicheroPreguntasCOD.txt";
     ArrayList<Pregunta> pregunta;
     Scanner sc;
     String delim = ",";
